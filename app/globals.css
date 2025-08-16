@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1200px;
+
+  --color-primary: #10151f;
+  --color-secondary: #475467;
+  --color-accent: #7edad2;
+  --color-accent-hover: #79d3cc;
+
+  --font-primary: "Bebas Neue";
+  --font-secondary: "Inter";
+}
+
+:root {
+  --radius: 0.5rem;
+}
+
+body {
+  @apply font-secondary text-base text-secondary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-primary;
+}
+
+.h1 {
+  @apply font-primary text-[45px] xl:text-[90px] leading-none;
+}
+
+.h2 {
+  @apply text-[36px] tracking-[-0.02em] leading-[44px] font-semibold;
+}
+
+.h3 {
+  @apply text-[20px] font-semibold;
+}
+
+.container {
+  @apply max-w-300 px-[15px];
+}
+
+.lead {
+  @apply text-xl;
+}
+
+.btn {
+  @apply rounded-lg h-12 py-3 px-5;
+}
+
+.btn-accent {
+  @apply bg-accent hover:bg-accent-hover text-white;
+}
+
+.input {
+  @apply h-12 px-3.5;
+}
+
+.textarea {
+  @apply resize-none p-3.5;
+}
+
+.input,
+.textarea {
+  @apply w-full outline-none border border-[#d0d5dd] focus:border-accent rounded-lg placeholder:text-[#667085];
+}
+
+.active {
+  @apply text-accent transition-all duration-200;
+}
